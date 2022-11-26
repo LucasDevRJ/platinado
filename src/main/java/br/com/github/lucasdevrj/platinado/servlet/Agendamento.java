@@ -13,11 +13,14 @@ public class Agendamento extends HttpServlet {//Classe para estender Servlet htt
 
 	@Override//método que pega a requisição do usuário e devolve a resposta
 	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws IOException {
+		//Escrevendo no html com Servlet
 		PrintWriter saida = resposta.getWriter();
 		saida.println("<html>");
 		saida.println("<body>");
 		saida.println("<p>Escrevendo no html com servlet</p>");
 		saida.println("</body>");
 		saida.println("</html>");
+		
+		System.out.println("O Servlet foi chamado!");
 	}
 }
