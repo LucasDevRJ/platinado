@@ -19,10 +19,12 @@ public class NovoAgendamentoServlet extends HttpServlet {
 	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		PrintWriter saida = resposta.getWriter();
 		String nome = requisicao.getParameter("nome");
+		String sobrenome = requisicao.getParameter("sobrenome");
 		
 		saida.println("<html>");
 		saida.println("<body>");
-		saida.println("<p>Olá " + nome + ", você foi agendado com sucesso!</p>");
+		saida.println("<p>Olá " + nome + " " + sobrenome + ", você foi agendado com sucesso!</p>");
+		saida.println("<a href='agendamento.html'>Voltar.</a>");
 		saida.println("</body>");
 		saida.println("</html>");
 		

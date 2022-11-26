@@ -2,8 +2,18 @@
 <html>
 	<head>
 		<title>Agendamento</title>
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<h3>Agende seu corte!</h3>
+		<form action="/platinado/novoAgendamento" method="POST">
+			<label for="nome">Nome:</label>
+			<input type="text" name="nome" placeholder="Digite seu nome"/>
+			
+			<label for="sobrenome">Sobrenome:</label>
+			<input type="text" name="sobrenome" placeholder="Digite seu sobrenome"/>
+			
+			<input type="submit"/>
+		</form>
 	</body>
 </html>
