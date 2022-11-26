@@ -1,6 +1,8 @@
 package br.com.github.lucasdevrj.platinado.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,11 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 public class NovoAgendamentoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+		PrintWriter saida = resposta.getWriter();
+		String nome = requisicao.getParameter("nome");
+		
+		saida.println("<html>");
+		saida.println("<body>");
+		saida.println("<p>Olá " + nome + ", você foi agendado com sucesso!</p>");
+		saida.println("</body>");
+		saida.println("</html>");
+		
+		System.out.println("Agendamento cloncluído!");
 	}
 
 }
