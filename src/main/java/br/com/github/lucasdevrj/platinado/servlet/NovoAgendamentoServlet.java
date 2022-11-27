@@ -26,6 +26,7 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		Cliente cliente = new Cliente(nome, sobrenome, celular, email);
 		
 		BancoDados bancoDados = new BancoDados();
+		bancoDados.adicionaCliente(cliente);
 		
 		saida.println("<html>");
 		saida.println("<body>");
