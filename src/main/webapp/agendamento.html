@@ -3,24 +3,37 @@
 	<head>
 		<title>Agendamento</title>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<h3>Agende seu corte!</h3>
-		<form class="formulario" action="/platinado/novoAgendamento" method="POST">
-			<label for="nome">Nome:</label>
-			<input class="formulario-campo" type="text" name="nome" placeholder="Digite seu nome"/ required>
-			
-			<label for="sobrenome">Sobrenome:</label>
-			<input class="formulario-campo" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required/>
-			
-			<label for="email">E-mail:</label>
-			<input class="formulario-campo" type="email" name="email" placeholder="Digite seu e-mail" required/>
-			
-			<label for="celular">Celular:</label>
-			<input class="formulario-campo" type="tel" name="celular" placeholder="Digite seu número de celular" required/>
-			
-			<input type="submit"/>
+		<form action="/platinado/novoAgendamento" method="POST">
+			<div class="formulario">
+				<div class="formulario-campo">
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" placeholder="Digite seu nome"/ required>
+				</div>
+				
+				<div class="formulario-campo">
+					<label for="sobrenome">Sobrenome:</label>
+					<input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required/>
+				</div>
+				
+				<div class="formulario-campo">
+					<label for="email">E-mail:</label>
+					<input type="email" name="email" placeholder="Digite seu e-mail" required/>
+				</div>
+				
+				<div class="formulario-campo">
+					<label for="celular">Celular:</label>
+					<input type="tel" name="celular" placeholder="Digite seu número de celular" required/>
+				</div>
+				
+				<div>
+					<input type="submit"/>
+				</div>
+			</div>
 		</form>
 	</body>
 </html>
