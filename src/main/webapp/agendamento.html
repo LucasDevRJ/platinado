@@ -8,10 +8,16 @@
 		<h3>Agende seu corte!</h3>
 		<form action="/platinado/novoAgendamento" method="POST">
 			<label for="nome">Nome:</label>
-			<input type="text" name="nome" placeholder="Digite seu nome"/>
+			<input type="text" name="nome" placeholder="Digite seu nome"/ required>
 			
 			<label for="sobrenome">Sobrenome:</label>
-			<input type="text" name="sobrenome" placeholder="Digite seu sobrenome"/>
+			<input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required/>
+			
+			<label for="email">E-mail:</label>
+			<input type="email" name="email" placeholder="Digite seu e-mail" required/>
+			
+			<label for="celular">Celular:</label>
+			<input type="tel" name="celular" placeholder="Digite seu número de celular" required/>
 			
 			<input type="submit"/>
 		</form>
