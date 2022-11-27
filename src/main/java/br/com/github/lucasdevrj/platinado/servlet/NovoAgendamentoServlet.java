@@ -29,9 +29,6 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		bancoDados.adicionaCliente(cliente);
 		
 		saida.println("<html>");
-		saida.println("<head>");
-		saida.println("<meta charset='UTF-8'>");
-		saida.println("</head>");
 		saida.println("<body>");
 		saida.println("<p>Oi " + nome + " " + sobrenome + ", voce foi agendado com sucesso!</p>");
 		saida.println("<a href='agendamento.html'>Voltar.</a>");
