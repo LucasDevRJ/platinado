@@ -20,6 +20,11 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		PrintWriter saida = resposta.getWriter();
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
+		String email = requisicao.getParameter("email");
+		String celular = requisicao.getParameter("celular");
+		
+		Cliente cliente = new Cliente(nome, sobrenome, email, celular);
+		
 		
 		saida.println("<html>");
 		saida.println("<body>");

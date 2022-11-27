@@ -8,6 +8,13 @@ public class Cliente {
 	private String celular;
 	private String email;
 	
+	public Cliente(String nome, String sobrenome, String celular, String email) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.celular = celular;
+		this.email = email;
+	}
+
 	public Integer getId() {
 		return id;
 	}
