@@ -49,7 +49,7 @@
 
 .formulario-imagem {
 	margin-top: 30px;
-	margin-bottom: 100px;
+	margin-bottom: 150px;
 	width: 40%
 }
 
@@ -75,4 +75,5 @@
 .navegacao-rodape-link {
 	margin: 0 25px;
 	font-size: 19px;
+	color: #FFFFFF;
 }

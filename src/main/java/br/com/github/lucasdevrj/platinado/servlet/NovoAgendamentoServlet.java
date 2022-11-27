@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class NovoAgendamentoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		PrintWriter saida = resposta.getWriter();
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
