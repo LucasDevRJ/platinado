@@ -23,8 +23,9 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		String email = requisicao.getParameter("email");
 		String celular = requisicao.getParameter("celular");
 		
-		Cliente cliente = new Cliente(nome, sobrenome, email, celular);
+		Cliente cliente = new Cliente(nome, sobrenome, celular, email);
 		
+		BancoDados bancoDados = new BancoDados();
 		
 		saida.println("<html>");
 		saida.println("<body>");
