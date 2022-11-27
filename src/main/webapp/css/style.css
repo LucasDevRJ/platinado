@@ -2,8 +2,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	top: 150px;
 }
 
 .formulario-campo {
 	margin: 10px 0;
+}
+
+.formulario-campo label {
+	font-size: 23px;
+}
+
+.formulario-campo input {
+	padding: 10px 15px;
 }
