@@ -6,6 +6,12 @@
 	top: 150px;
 }
 
+.formulario h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 900;
+}
+
 .formulario-campo {
 	margin: 10px 0;
 }
