@@ -10,4 +10,8 @@ public class BancoDados {
 	public void adicionaCliente(Cliente cliente) {
 		BancoDados.clientes.add(cliente);
 	}
+	
+	public List<Cliente> getClientes() {
+		return BancoDados.clientes;
+	}
 }

@@ -53,4 +53,11 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	@Override
+	public String toString() {
+		return "Nome: " + this.nome + "\nSobrenome: " 
+		+ this.sobrenome + "\nE-mail: " + this.email + "\nCelular: " 
+		+ this.celular;
+	}
 }
