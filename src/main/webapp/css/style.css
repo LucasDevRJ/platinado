@@ -46,3 +46,8 @@
 .formulario-campo input {
 	padding: 10px 15px;
 }
+
+.formulario-imagem {
+	margin-top: 50px;
+	width: 40%
+}
