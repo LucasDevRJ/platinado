@@ -48,6 +48,31 @@
 }
 
 .formulario-imagem {
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 100px;
 	width: 40%
+}
+
+.rodape {
+	margin-top: 100px;
+	height: 400px;
+	background: #808080;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navegacao-rodape {
+	display: flex;
+	font-size: 20px;
+}
+
+.logo-rodape {
+	width: 20%;
+}
+
+.navegacao-rodape-link {
+	margin: 0 25px;
+	font-size: 19px;
 }
