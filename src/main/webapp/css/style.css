@@ -7,6 +7,20 @@
 	width: 20%;
 }
 
+.navegacao {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	right: 80px;
+	bottom: 50px
+}
+
+.navegacao-link {
+	margin: 0 25px;
+	font-size: 23px;
+	font-style: italic;	
+}
+
 .formulario {
 	display: flex;
 	flex-direction: column;
