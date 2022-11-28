@@ -1,5 +1,6 @@
 <%
-	String nome = "João";
+	String nome = (String) request.getAttribute("nome");
+	String sobrenome = (String) request.getAttribute("sobrenome");
 	System.out.println(nome);
 %>
 <!DOCTYPE html>
@@ -24,19 +25,17 @@
 				</nav>
 			</header>
 			
-			<main>
-				<div class="conteudo-principal">
-					<div>
-						<h2>Olá <%=nome%>, você foi agendado com sucesso!</h2>
-					</div>
-					<div>
-						<img class="agendado-imagem" alt="" src="img/agendado.jpg">
-					</div>
-					<div>
-						<a href="agendamento.html">Voltar</a>
-					</div>
+			<div class="agendado-conteudo">
+				<div>
+					<h2 class="agendado-texto">Olá <%=nome + " " + sobrenome%>, você foi agendado com sucesso!</h2>
 				</div>
-			</main>
+				<div>
+					<img alt="" src="img/agendado.png">
+				</div>
+				<div>
+					<a href="agendamento.html">Voltar</a>
+				</div>
+			</div>
 			
 			<footer class="rodape">
 				<img class="logo-rodape" alt="" src="img/logo-rodape.png">

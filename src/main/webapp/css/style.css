@@ -78,6 +78,16 @@
 	color: #FFFFFF;
 }
 
-.conteudo-principal {
+.agendado-conteudo {
+	margin-top: 100px;
 	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.agendado-texto {
+	font-size: 30px;
 }
