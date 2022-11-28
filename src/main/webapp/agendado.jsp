@@ -1,3 +1,7 @@
+<%
+	String nome = "João";
+	System.out.println(nome);
+%>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -23,7 +27,7 @@
 			<main>
 				<div class="conteudo-principal">
 					<div>
-						<h2>VocÃª foi agendado com sucesso!</h2>
+						<h2>Olá <%=nome%>, você foi agendado com sucesso!</h2>
 					</div>
 					<div>
 						<img class="agendado-imagem" alt="" src="img/agendado.jpg">
