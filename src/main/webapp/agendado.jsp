@@ -35,11 +35,11 @@
 			</div>
 			
 			<div class="agendado-imagens">
-				<a>
+				<a href="agendamento.html">
 					<img alt="" src="img/seta.png">
 				</a>
 				
-				<a>
+				<a href="/platinado/clientes">
 					<img alt="" src="img/lista.png">
 				</a>
 			</div>
