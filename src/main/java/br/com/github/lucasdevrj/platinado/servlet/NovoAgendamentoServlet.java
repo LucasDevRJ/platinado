@@ -3,6 +3,7 @@ package br.com.github.lucasdevrj.platinado.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +28,11 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		
 		BancoDados bancoDados = new BancoDados();
 		bancoDados.adicionaCliente(cliente);
+		
+		RequestDispatcher envio = requisicao.getRequestDispatcher("/agendado.jsp");
+		requisicao.setAttribute("nome", cliente.getNome());
+		requisicao.setAttribute("sobrenome", cliente.getSobrenome());
+		envio.forward(requisicao, resposta);
 	}
 
 }
