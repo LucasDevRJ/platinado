@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<meta charset="ISO-8859-1">
+			<meta charset="UTF-8">
 			<title>Platinado</title>
 			<link rel="stylesheet" href="css/reset.css">
 			<link rel="stylesheet" href="css/style.css">
@@ -14,15 +14,24 @@
 					<ul class="navegacao">
 						<li class="navegacao-link">Principal</li>
 						<li class="navegacao-link">Galeria</li>
-						<li class="navegacao-link">Localização</li>
+						<li class="navegacao-link">LocalizaÃ§Ã£o</li>
 						<li class="navegacao-link">Sobre</li>
 					</ul>
 				</nav>
 			</header>
 			
 			<main>
-				<h2>Você foi agendado com sucesso!</h2>
-				<img class="agendado-imagem" alt="" src="img/agendado.jpg">
+				<div class="conteudo-principal">
+					<div>
+						<h2>VocÃª foi agendado com sucesso!</h2>
+					</div>
+					<div>
+						<img class="agendado-imagem" alt="" src="img/agendado.jpg">
+					</div>
+					<div>
+						<a href="agendamento.html">Voltar</a>
+					</div>
+				</div>
 			</main>
 			
 			<footer class="rodape">
@@ -31,7 +40,7 @@
 					<ul class="navegacao-rodape">
 						<li class="navegacao-rodape-link">Principal</li>
 						<li class="navegacao-rodape-link">Galeria</li>
-						<li class="navegacao-rodape-link">Localização</li>
+						<li class="navegacao-rodape-link">LocalizaÃ§Ã£o</li>
 						<li class="navegacao-rodape-link">Sobre</li>
 					</ul>
 				</nav>
