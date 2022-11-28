@@ -31,7 +31,16 @@
 			        List<Cliente> clientes = (List<Cliente>)request.getAttribute("clientes");
 			        for (Cliente cliente : clientes) { 
 			    %>
-			        <li><%= cliente.getNome() %></li>
+			        <li>Nome: <%= cliente.getNome() %>
+			        	<br>
+			        	Sobrenome: <%= cliente.getSobrenome() %>
+			        	<br>
+			        	E-mail: <%= cliente.getEmail() %>
+			        	<br>
+			        	Celular: <%= cliente.getCelular() %>
+			        	<br>
+			        	<br>
+			        </li>
 			    <%
 			        }
 			    %>
