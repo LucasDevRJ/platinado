@@ -1,3 +1,5 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
 <%
 	
 %>
@@ -23,11 +25,17 @@
 				</nav>
 			</header>
 			
-			<div class="lista-agendados">
-				<div>
-					
-				</div>
-			</div>
+			<ul>
+				<%
+					for(Cliente cliente : clientes) {
+				%>
+					<li>
+						<%=cliente.getNome()%>	
+					</li>
+				<% 
+					}
+				%>
+			</ul>
 			
 			<footer class="rodape">
 				<img class="logo-rodape" alt="" src="img/logo-rodape.png">

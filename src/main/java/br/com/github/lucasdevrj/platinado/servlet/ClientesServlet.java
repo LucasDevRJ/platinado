@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,24 +19,10 @@ public class ClientesServlet extends HttpServlet {
 		BancoDados bancoDados = new BancoDados();
 		List<Cliente> clientes = bancoDados.getClientes();
 		
-		PrintWriter saida = resposta.getWriter();
+		requisicao.setAttribute("clientes", clientes);
 		
-		saida.println("<html>");
-		saida.println("<body>");
-		saida.println("<ul>");
-		
-		for (Cliente cliente : clientes) {
-			saida.println("<li>");
-			saida.println("<p>Nome: " + cliente.getNome() + "</p>");
-			saida.println("<p>Sobrenome: " + cliente.getSobrenome() + "</p>");
-			saida.println("<p>E-mail: " + cliente.getEmail() + "</p>");
-			saida.println("<p>Celular: " + cliente.getCelular() + "</p>");
-			saida.println("</li>");
-		}
-		
-		saida.println("</ul>");
-		saida.println("</body>");
-		saida.println("</html>");
+		RequestDispatcher envio = requisicao.getRequestDispatcher("/agendados.jsp");
+		envio.forward(requisicao, resposta);
 	}
 
 }
