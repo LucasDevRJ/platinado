@@ -44,7 +44,7 @@
 					<ul class="navegacao-rodape">
 						<li class="navegacao-rodape-link">Principal</li>
 						<li class="navegacao-rodape-link">Galeria</li>
-						<li class="navegacao-rodape-link">LocalizaÃ§Ã£o</li>
+						<li class="navegacao-rodape-link">Localização</li>
 						<li class="navegacao-rodape-link">Sobre</li>
 					</ul>
 				</nav>

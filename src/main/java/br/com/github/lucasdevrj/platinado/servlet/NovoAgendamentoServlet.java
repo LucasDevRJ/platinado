@@ -27,16 +27,6 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		
 		BancoDados bancoDados = new BancoDados();
 		bancoDados.adicionaCliente(cliente);
-		
-		saida.println("<html>");
-		saida.println("<body>");
-		saida.println("<p>Oi " + nome + " " + sobrenome + ", voce foi agendado com sucesso!</p>");
-		saida.println("<a href='agendamento.html'>Voltar.</a>");
-		saida.println("</body>");
-		saida.println("</html>");
-		
-		System.out.println("Agendamento cloncluído!");
-		System.out.println(bancoDados.getClientes());
 	}
 
 }
