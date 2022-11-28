@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/clientes")
+@WebServlet("/agendados")
 public class ClientesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -23,6 +23,8 @@ public class ClientesServlet extends HttpServlet {
 		
 		RequestDispatcher envio = requisicao.getRequestDispatcher("/agendados.jsp");
 		envio.forward(requisicao, resposta);
+		
+		System.out.println(clientes.toString());
 	}
 
 }

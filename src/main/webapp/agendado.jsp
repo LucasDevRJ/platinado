@@ -32,11 +32,16 @@
 				<div>
 					<img class="agendado-imagem" alt="" src="img/agendado.png">
 				</div>
-				<div>
-					<a href="agendamento.html">
-						<img alt="" src="img/seta.png">
-					</a>
-				</div>
+			</div>
+			
+			<div class="agendado-imagens">
+				<a>
+					<img alt="" src="img/seta.png">
+				</a>
+				
+				<a>
+					<img alt="" src="img/lista.png">
+				</a>
 			</div>
 			
 			<footer class="rodape">

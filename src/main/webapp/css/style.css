@@ -103,3 +103,14 @@
 	text-decoration: none;
 	color: #000000;
 }
+
+.agendado-imagens {
+	display: flex;
+	align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.agendado-imagens a img {
+	margin: 0 50px;
+}

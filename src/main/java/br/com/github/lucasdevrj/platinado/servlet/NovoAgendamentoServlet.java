@@ -18,7 +18,6 @@ public class NovoAgendamentoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
-		PrintWriter saida = resposta.getWriter();
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
 		String email = requisicao.getParameter("email");
@@ -32,7 +31,12 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		RequestDispatcher envio = requisicao.getRequestDispatcher("/agendado.jsp");
 		requisicao.setAttribute("nome", cliente.getNome());
 		requisicao.setAttribute("sobrenome", cliente.getSobrenome());
+		requisicao.setAttribute("email", cliente.getEmail());
+		requisicao.setAttribute("celular", cliente.getCelular());
 		envio.forward(requisicao, resposta);
+		
+		System.out.println(cliente.toString());
+		System.out.println(bancoDados.getClientes().size());
 	}
 
 }

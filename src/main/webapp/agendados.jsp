@@ -1,5 +1,6 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
+<%@page import="java.util.List" %>
 <%
 	
 %>
@@ -25,17 +26,16 @@
 				</nav>
 			</header>
 			
-			<ul>
-				<%
-					for(Cliente cliente : clientes) {
-				%>
-					<li>
-						<%=cliente.getNome()%>	
-					</li>
-				<% 
-					}
-				%>
-			</ul>
+			 <ul>
+			    <%
+			        List<Cliente> clientes = (List<Cliente>)request.getAttribute("clientes");
+			        for (Cliente cliente : clientes) { 
+			    %>
+			        <li><%= cliente.getNome() %></li>
+			    <%
+			        }
+			    %>
+			  </ul>
 			
 			<footer class="rodape">
 				<img class="logo-rodape" alt="" src="img/logo-rodape.png">
