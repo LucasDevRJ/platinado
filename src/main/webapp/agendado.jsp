@@ -30,10 +30,12 @@
 					<h2 class="agendado-texto">Olá <%=nome + " " + sobrenome%>, você foi agendado com sucesso!</h2>
 				</div>
 				<div>
-					<img alt="" src="img/agendado.png">
+					<img class="agendado-imagem" alt="" src="img/agendado.png">
 				</div>
 				<div>
-					<a href="agendamento.html">Voltar</a>
+					<a href="agendamento.html">
+						<img alt="" src="img/seta.png">
+					</a>
 				</div>
 			</div>
 			

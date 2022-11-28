@@ -90,4 +90,16 @@
 
 .agendado-texto {
 	font-size: 30px;
+	font-weight: 900;
+}
+
+.agendado-imagem {
+	widows: 80%;
+	margin: 40px 0;
+}
+
+.agendado-link {
+	font-size: 24px;
+	text-decoration: none;
+	color: #000000;
 }
