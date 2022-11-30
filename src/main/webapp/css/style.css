@@ -19,6 +19,7 @@
 	margin: 0 25px;
 	font-size: 23px;
 	font-style: italic;	
+	cursor: pointer;
 }
 
 .formulario {
@@ -86,6 +87,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .agendado-texto {

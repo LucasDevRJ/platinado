@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -21,16 +23,25 @@
 			</header>
 			
 			<div class="agendado-conteudo">
-				<div>
-					<h2 class="agendado-texto">Olá ${nome} ${sobrenome}, você foi agendado com sucesso!</h2>
-				</div>
-				<div>
-					<img class="agendado-imagem" alt="" src="img/agendado.png">
-				</div>
+				<c:if test="${not empty nome or sobrenome}">
+					<div>
+						<h2 class="agendado-texto">Olá ${nome} ${sobrenome}, você foi agendado com sucesso!</h2>
+					</div>
+					<div>
+						<img class="agendado-imagem" alt="" src="img/agendado.png">
+					</div>
+				</c:if>
+				
+				<c:if test="${empty nome or sobrenome}">
+					<div>
+						<h2 class="agendado-texto">Nenhum agendamento foi realizado.</h2>
+					</div>
+				</c:if>
+				
 			</div>
 			
 			<div class="agendado-imagens">
-				<a href="agendamento.html">
+				<a href="agenda.jsp">
 					<img alt="" src="img/seta.png">
 				</a>
 				

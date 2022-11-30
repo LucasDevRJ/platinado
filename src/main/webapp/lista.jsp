@@ -2,13 +2,14 @@
 <%@ page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
 <%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 	<html>
 		<head>
 			<meta charset="UTF-8">
 			<title>Platinado</title>
 			<link rel="stylesheet" href="css/reset.css">
-			<link rel="stylesheet" href="css/style.css">
+			<link href="css/style.css" rel="stylesheet" type="text/css">
 		</head>
 		
 		<body>
@@ -37,7 +38,7 @@
 			 </ul>
 			 
 			  <div class="agendado-imagens">
-				<a href="agendamento.html">
+				<a href="agenda.jsp">
 					<img alt="" src="img/seta.png">
 				</a>
 				

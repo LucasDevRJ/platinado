@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/novoAgendamento" var="enderecoServletNovoAgendamento"/>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,7 +21,8 @@
 				</ul>
 			</nav>
 		</header>
-		<form action="/platinado/novoAgendamento" method="POST">
+		
+		<form action="${enderecoServletNovoAgendamento}" method="POST">
 			<div class="formulario">
 				<h2>Agende seu corte!</h2>
 				
