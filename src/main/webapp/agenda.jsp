@@ -47,7 +47,7 @@
 				</div>
 				
 				<div>
-					<input type="submit"/>
+					<input class="botao" type="submit"/>
 				</div>
 				
 				<img class="formulario-imagem" alt="" src="img/formulario.jpg">
