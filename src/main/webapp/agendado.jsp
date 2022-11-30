@@ -1,8 +1,3 @@
-<%
-	String nome = (String) request.getAttribute("nome");
-	String sobrenome = (String) request.getAttribute("sobrenome");
-	System.out.println(nome);
-%>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -27,7 +22,7 @@
 			
 			<div class="agendado-conteudo">
 				<div>
-					<h2 class="agendado-texto">Olá <%=nome + " " + sobrenome%>, você foi agendado com sucesso!</h2>
+					<h2 class="agendado-texto">Olá ${nome} ${sobrenome}, você foi agendado com sucesso!</h2>
 				</div>
 				<div>
 					<img class="agendado-imagem" alt="" src="img/agendado.png">

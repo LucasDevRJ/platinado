@@ -45,6 +45,16 @@
 			        }
 			    %>
 			  </ul>
+			  
+			  <div class="agendado-imagens">
+				<a href="agendamento.html">
+					<img alt="" src="img/seta.png">
+				</a>
+				
+				<a href="/platinado/clientes">
+					<img alt="" src="img/lista.png">
+				</a>
+			</div>
 			
 			<footer class="rodape">
 				<img class="logo-rodape" alt="" src="img/logo-rodape.png">
