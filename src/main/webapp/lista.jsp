@@ -1,9 +1,7 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
-<%@page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
-<%@page import="java.util.List" %>
-<%
-	
-%>
+<%@ page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@ page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -26,26 +24,18 @@
 				</nav>
 			</header>
 			
-			 <ul>
-			    <%
-			        List<Cliente> clientes = (List<Cliente>)request.getAttribute("clientes");
-			        for (Cliente cliente : clientes) { 
-			    %>
-			        <li>Nome: <%= cliente.getNome() %>
-			        	<br>
-			        	Sobrenome: <%= cliente.getSobrenome() %>
-			        	<br>
-			        	E-mail: <%= cliente.getEmail() %>
-			        	<br>
-			        	Celular: <%= cliente.getCelular() %>
-			        	<br>
-			        	<br>
-			        </li>
-			    <%
-			        }
-			    %>
-			  </ul>
-			  
+			 
+			 <ul class="clientes">
+			 	<c:forEach items="${clientes}" var="cliente">
+			 		<li>
+			 			<p>Nome: ${cliente.nome}</p>
+			 			<p>Nome: ${cliente.sobrenome}</p>
+			 			<p>Nome: ${cliente.email}</p>
+			 			<p>Nome: ${cliente.celular}</p>
+			 		</li>
+			 	</c:forEach>
+			 </ul>
+			 
 			  <div class="agendado-imagens">
 				<a href="agendamento.html">
 					<img alt="" src="img/seta.png">

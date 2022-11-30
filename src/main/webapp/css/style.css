@@ -114,3 +114,10 @@
 .agendado-imagens a img {
 	margin: 0 50px;
 }
+
+.clientes {
+	width: 30%;
+	height: 100px;
+	border: 2px solid black;
+	background: red;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Agendamento</title>
+		<title>Platinado | Agenda</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
 				<ul class="navegacao">
 					<li class="navegacao-link">Principal</li>
 					<li class="navegacao-link">Galeria</li>
-					<li class="navegacao-link">LocalizaÃ§Ã£o</li>
+					<li class="navegacao-link">Localização</li>
 					<li class="navegacao-link">Sobre</li>
 				</ul>
 			</nav>
@@ -39,7 +39,7 @@
 				
 				<div class="formulario-campo">
 					<label for="celular">Celular:</label>
-					<input type="tel" name="celular" placeholder="Digite seu nÃºmero de celular" required/>
+					<input type="tel" name="celular" placeholder="Digite seu número de celular" required/>
 				</div>
 				
 				<div>
@@ -56,7 +56,7 @@
 				<ul class="navegacao-rodape">
 					<li class="navegacao-rodape-link">Principal</li>
 					<li class="navegacao-rodape-link">Galeria</li>
-					<li class="navegacao-rodape-link">LocalizaÃ§Ã£o</li>
+					<li class="navegacao-rodape-link">Localização</li>
 					<li class="navegacao-rodape-link">Sobre</li>
 				</ul>
 			</nav>

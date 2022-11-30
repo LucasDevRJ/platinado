@@ -21,7 +21,7 @@ public class ClientesServlet extends HttpServlet {
 		
 		requisicao.setAttribute("clientes", clientes);
 		
-		RequestDispatcher envio = requisicao.getRequestDispatcher("/agendados.jsp");
+		RequestDispatcher envio = requisicao.getRequestDispatcher("/lista.jsp");
 		envio.forward(requisicao, resposta);
 		
 		System.out.println(clientes.toString());
