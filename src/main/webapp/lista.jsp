@@ -25,16 +25,18 @@
 				</nav>
 			</header>
 			
-			<c:forEach items="${clientes}" var="cliente">
-			 	<ul class="clientes">
-			 		<li>
-			 			<p>Nome: ${cliente.nome}</p>
-			 			<p>Nome: ${cliente.sobrenome}</p>
-			 			<p>Nome: ${cliente.email}</p>
-			 			<p>Nome: ${cliente.celular}</p>
-			 		</li>
-			 	</ul>
-			 </c:forEach>
+			<div class="conteudo-clientes">
+				<c:forEach items="${clientes}" var="cliente">
+				 	<ul class="clientes">
+				 		<li>
+				 			<p>Nome: ${cliente.nome}</p>
+				 			<p>Sobrenome: ${cliente.sobrenome}</p>
+				 			<p>E-mail: ${cliente.email}</p>
+				 			<p>Celular: ${cliente.celular}</p>
+				 		</li>
+				 	</ul>
+			 	</c:forEach>
+			</div>
 			 
 			  <div class="agendado-imagens">
 				<a href="agenda.jsp">
