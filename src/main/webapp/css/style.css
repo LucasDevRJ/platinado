@@ -143,3 +143,7 @@
 	display: flex;
 	cursor: pointer;
 }
+
+.clientes:hover {
+	border-color: #FFD700;	
+}

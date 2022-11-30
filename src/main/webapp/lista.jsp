@@ -19,7 +19,7 @@
 					<ul class="navegacao">
 						<li class="navegacao-link">Principal</li>
 						<li class="navegacao-link">Galeria</li>
-						<li class="navegacao-link">LocalizaÃ§Ã£o</li>
+						<li class="navegacao-link">Localização</li>
 						<li class="navegacao-link">Sobre</li>
 					</ul>
 				</nav>
