@@ -41,7 +41,7 @@
 					 					<img alt="" src="img/lapis.png">
 					 				</a>
 					 				
-					 				<a href="/platinado/removeCliente">
+					 				<a href="/platinado/removeCliente?id=${cliente.id}">
 					 					<img alt="" src="img/excluir.png">
 					 				</a>
 					 			</div>

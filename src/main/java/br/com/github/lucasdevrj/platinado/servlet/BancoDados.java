@@ -1,6 +1,7 @@
 package br.com.github.lucasdevrj.platinado.servlet;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class BancoDados {
@@ -19,5 +20,17 @@ public class BancoDados {
 	
 	public List<Cliente> getClientes() {
 		return BancoDados.clientes;
+	}
+
+	public void removeCliente(Integer id) {
+		Iterator<Cliente> iterator = clientes.iterator();
+		
+		while (iterator.hasNext()) {
+			Cliente cliente = iterator.next();
+			
+			if (cliente.getId() == id) {
+				iterator.remove();
+			}
+		}
 	}
 }
