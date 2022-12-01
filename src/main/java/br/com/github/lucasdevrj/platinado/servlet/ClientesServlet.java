@@ -21,6 +21,8 @@ public class ClientesServlet extends HttpServlet {
 		
 		requisicao.setAttribute("clientes", clientes);
 		
+//		resposta.sendRedirect("lista");
+		
 		RequestDispatcher envio = requisicao.getRequestDispatcher("/lista.jsp");
 		envio.forward(requisicao, resposta);
 		
