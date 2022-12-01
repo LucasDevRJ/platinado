@@ -37,7 +37,7 @@
 					 			<p>Celular: ${cliente.celular}</p>
 					 			<p>Data: ${dataAgendamento}</p>
 					 			<div class="clientes-icones">
-					 				<a href="/platinado/editaCliente">
+					 				<a href="/platinado/exibeCliente?id=${cliente.id}">
 					 					<img alt="" src="img/lapis.png">
 					 				</a>
 					 				
