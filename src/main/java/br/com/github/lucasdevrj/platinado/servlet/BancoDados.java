@@ -35,7 +35,12 @@ public class BancoDados {
 	}
 
 	public Cliente pesquisaCliente(Integer id) {
-		// TODO Auto-generated method stub
+		for (Cliente cliente : clientes) {
+			if (cliente.getId() == id) {
+				return cliente;
+			}
+		}
+		
 		return null;
 	}
 }

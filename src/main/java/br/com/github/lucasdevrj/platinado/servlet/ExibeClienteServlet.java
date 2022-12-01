@@ -1,6 +1,8 @@
 package br.com.github.lucasdevrj.platinado.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +20,11 @@ public class ExibeClienteServlet extends HttpServlet {
 		BancoDados bancoDados = new BancoDados();
 		
 		Cliente cliente = bancoDados.pesquisaCliente(id);
+		
+		requisicao.setAttribute("cliente", cliente);
+		
+		RequestDispatcher envia = requisicao.getRequestDispatcher("/editaAgenda.jsp");
+		envia.forward(requisicao, resposta);
 	}
 
 }
