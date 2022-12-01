@@ -37,11 +37,11 @@
 					 			<p>Celular: ${cliente.celular}</p>
 					 			<p>Data: ${dataAgendamento}</p>
 					 			<div class="clientes-icones">
-					 				<a>
+					 				<a href="/platinado/editaCliente">
 					 					<img alt="" src="img/lapis.png">
 					 				</a>
 					 				
-					 				<a>
+					 				<a href="/platinado/removeCliente">
 					 					<img alt="" src="img/excluir.png">
 					 				</a>
 					 			</div>
