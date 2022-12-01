@@ -33,6 +33,7 @@
 				 			<p>Sobrenome: ${cliente.sobrenome}</p>
 				 			<p>E-mail: ${cliente.email}</p>
 				 			<p>Celular: ${cliente.celular}</p>
+				 			<p>Data: ${cliente.data}</p>
 				 		</li>
 				 	</ul>
 			 	</c:forEach>

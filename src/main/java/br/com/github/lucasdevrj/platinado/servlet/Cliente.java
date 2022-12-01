@@ -1,5 +1,7 @@
 package br.com.github.lucasdevrj.platinado.servlet;
 
+import java.util.Date;
+
 public class Cliente {
 
 	private Integer id;
@@ -7,6 +9,7 @@ public class Cliente {
 	private String sobrenome;
 	private String celular;
 	private String email;
+	private Date dataAgendamento;
 	
 	public Cliente(String nome, String sobrenome, String celular, String email) {
 		this.nome = nome;
@@ -52,6 +55,14 @@ public class Cliente {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public Date getDataAgendamento() {
+		return dataAgendamento;
+	}
+	
+	public void setDataAgendamento(Date dataAgendamento) {
+		this.dataAgendamento = dataAgendamento;
 	}
 	
 	@Override
