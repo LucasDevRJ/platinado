@@ -2,6 +2,9 @@ package br.com.github.lucasdevrj.platinado.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,8 +25,19 @@ public class NovoAgendamentoServlet extends HttpServlet {
 		String sobrenome = requisicao.getParameter("sobrenome");
 		String email = requisicao.getParameter("email");
 		String celular = requisicao.getParameter("celular");
+		String data = requisicao.getParameter("dataAgendamento");
+		
+		Date dataAgendamento = null;
+		
+		try {
+			SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+			dataAgendamento = dataFormatada.parse(data);
+		} catch (ParseException e) {
+			throw new ServletException(e);
+		}
 		
 		Cliente cliente = new Cliente(nome, sobrenome, celular, email);
+		cliente.setDataAgendamento(dataAgendamento);
 		
 		BancoDados bancoDados = new BancoDados();
 		bancoDados.adicionaCliente(cliente);

@@ -30,7 +30,7 @@
 				<c:forEach items="${clientes}" var="cliente">
 				 	<ul class="clientes">
 					 		<li>
-					 			<fmt:formatDate value="${cliente.dataAgendamento}" var="dataAgendamento" pattern="dd/MM/yyyy - HH:mm"/>
+					 			<fmt:formatDate value="${cliente.dataAgendamento}" var="dataAgendamento" pattern="dd/MM/yyyy"/>
 					 			<p>Nome: ${cliente.nome}</p>
 					 			<p>Sobrenome: ${cliente.sobrenome}</p>
 					 			<p>E-mail: ${cliente.email}</p>

@@ -54,6 +54,11 @@
 	width: 40%;
 }
 
+.data-texto {
+	display: flex;
+    margin-top: 10px;
+}
+
 .botao {
 	padding: 10px 50px;
 	font-size: 18px;

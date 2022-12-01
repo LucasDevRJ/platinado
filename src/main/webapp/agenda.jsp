@@ -28,7 +28,7 @@
 				
 				<div class="formulario-campo">
 					<label for="nome">Nome:</label>
-					<input type="text" name="nome" placeholder="Digite seu nome"/ required>
+					<input type="text" name="nome" placeholder="Digite seu nome" required/>
 				</div>
 				
 				<div class="formulario-campo">
@@ -44,6 +44,11 @@
 				<div class="formulario-campo">
 					<label for="celular">Celular:</label>
 					<input type="tel" name="celular" placeholder="Digite seu número de celular" required/>
+				</div>
+				
+				<div class="formulario-campo">
+					<label for="dataAgendamento">Data:</label>
+					<input type="text" name="dataAgendamento" pattern="\d{1,2}/\d{1,2}/\d{4}" required placeholder="dd/mm/aaaa"/>
 				</div>
 				
 				<div>
