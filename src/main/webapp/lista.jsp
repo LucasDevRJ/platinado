@@ -2,6 +2,7 @@
 <%@ page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
 <%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 	<html>
@@ -28,14 +29,15 @@
 			<div class="conteudo-clientes">
 				<c:forEach items="${clientes}" var="cliente">
 				 	<ul class="clientes">
-				 		<li>
-				 			<p>Nome: ${cliente.nome}</p>
-				 			<p>Sobrenome: ${cliente.sobrenome}</p>
-				 			<p>E-mail: ${cliente.email}</p>
-				 			<p>Celular: ${cliente.celular}</p>
-				 			<p>Data: ${cliente.data}</p>
-				 		</li>
-				 	</ul>
+					 		<li>
+					 			<fmt:formatDate value="${cliente.dataAgendamento}" var="dataAgendamento" pattern="dd/MM/yyyy - HH:mm"/>
+					 			<p>Nome: ${cliente.nome}</p>
+					 			<p>Sobrenome: ${cliente.sobrenome}</p>
+					 			<p>E-mail: ${cliente.email}</p>
+					 			<p>Celular: ${cliente.celular}</p>
+					 			<p>Data: ${dataAgendamento}</p>
+					 		</li>
+				 		</ul>
 			 	</c:forEach>
 			</div>
 			 

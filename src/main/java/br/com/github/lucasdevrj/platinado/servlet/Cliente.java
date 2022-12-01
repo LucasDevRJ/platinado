@@ -9,7 +9,7 @@ public class Cliente {
 	private String sobrenome;
 	private String celular;
 	private String email;
-	private Date dataAgendamento;
+	private Date dataAgendamento = new Date();
 	
 	public Cliente(String nome, String sobrenome, String celular, String email) {
 		this.nome = nome;
