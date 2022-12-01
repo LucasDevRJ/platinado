@@ -36,7 +36,7 @@
 					 			<p>E-mail: ${cliente.email}</p>
 					 			<p>Celular: ${cliente.celular}</p>
 					 			<p>Data: ${dataAgendamento}</p>
-					 			<div>
+					 			<div class="clientes-icones">
 					 				<a>
 					 					<img alt="" src="img/lapis.png">
 					 				</a>

@@ -141,14 +141,19 @@
 
 .clientes {
 	width: 23%;
-	height: 67px;
 	border: 2px solid black;
-	padding: 20px 10px;
-	margin: 20px 0;
 	display: flex;
 	cursor: pointer;
+	padding: 15px 10px;
 }
 
 .clientes:hover {
 	border-color: #FFD700;	
+}
+
+.clientes-icones {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 10px;
 }
