@@ -12,18 +12,18 @@ GitHub | LucasDevRJ
 Tecnologias | Java, TomCat e Servlet
 Objetivo    | Aprender Servlet
 
-## :icecream: Funcionalidades do projeto
+## :file_folder: Funcionalidades do projeto
 
 - `Funcionalidade 1`: Cadastrar cliente
 - `Funcionalidade 2`: Exibir lista de cadastros
 - `Funcionalidade 3`: Editar cadastro
 - `Funcionalidade 4`: Excluir cadastro
 
-## :ice_cream: Acesso ao projeto
+## :file_folder: Acesso ao projeto
 
 **Para acessar o projeto basta baixa-lo <a href="https://github.com/LucasDevRJ/platinado/archive/refs/heads/main.zip">aqui</a>.**
 
-## :icecream: Abrir e rodar o projeto
+## :open_file_folder: Abrir e rodar o projeto
 
 **1. Tenha alguma IDE que compile Java;**
 
