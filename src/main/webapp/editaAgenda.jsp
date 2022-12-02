@@ -53,6 +53,8 @@
 					<input type="text" name="dataAgendamento" pattern="\d{1,2}/\d{1,2}/\d{4}" required placeholder="dd/mm/aaaa" value="${dataAgendamento}"/>
 				</div>
 				
+				<input type="hidden" name="id" value="${cliente.id}">
+				
 				<div>
 					<input class="botao" type="submit"/>
 				</div>
