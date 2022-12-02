@@ -5,6 +5,8 @@
 ## Sobre
 Sistema de cadastro de clientes de uma barbearia. No sistema, além de cadastrar clientes, podemos exibir os dados, alterar os dados e excluir clientes. Fora isso, o site apresenta uma linda estilização temática de uma barbearia.
 
+https://user-images.githubusercontent.com/95040236/205374315-725ad9d2-40c2-450d-9f08-268a5e9a452e.mp4
+
 Projeto   | Platinado
 --------- | ------
 Desenvolvedor | Lucas Pereira de Lima
