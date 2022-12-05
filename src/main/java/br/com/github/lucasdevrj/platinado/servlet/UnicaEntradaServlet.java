@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.github.lucasdevrj.platinado.acao.ListaClientes;
+import br.com.github.lucasdevrj.platinado.acao.RemoveCliente;
+import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
@@ -18,10 +20,12 @@ public class UnicaEntradaServlet extends HttpServlet {
 		
 		if (acao.equals("listaClientes")) {
 			ListaClientes lista = new ListaClientes();
-			lista.executaLista(requisicao, resposta);
+			lista.executa(requisicao, resposta);
 			
 		} else if (acao.equals("removeCliente")) {
-			System.out.println("Removendo ciente");
+			RemoveCliente remove = new RemoveCliente();
+			remove.executa(requisicao, resposta);
+			
 		} else if (acao.equals("exibeCliente")) {
 			System.out.println("Exibindo cliente");
 		}

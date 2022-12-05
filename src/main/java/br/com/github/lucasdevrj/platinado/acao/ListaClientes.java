@@ -13,7 +13,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
 public class ListaClientes {
 
-	public void executaLista(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		System.out.println("Listando clientes");
 		
 		BancoDados bancoDados = new BancoDados();
