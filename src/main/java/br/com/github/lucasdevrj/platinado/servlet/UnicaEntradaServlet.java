@@ -11,7 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+		String acao = requisicao.getParameter("acao");
 		
+		if (acao.equals("listaClientes")) {
+			System.out.println("Listando clientes");
+		} else if (acao.equals("removeCliente")) {
+			System.out.println("Removendo ciente");
+		} else if (acao.equals("exibeCliente")) {
+			System.out.println("Exibindo cliente");
+		}
 	}
 }
