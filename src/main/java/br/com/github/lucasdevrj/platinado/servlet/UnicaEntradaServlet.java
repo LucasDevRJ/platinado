@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.platinado.acao.ListaClientes;
+
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -15,7 +17,9 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String acao = requisicao.getParameter("acao");
 		
 		if (acao.equals("listaClientes")) {
-			System.out.println("Listando clientes");
+			ListaClientes lista = new ListaClientes();
+			lista.executaLista(requisicao, resposta);
+			
 		} else if (acao.equals("removeCliente")) {
 			System.out.println("Removendo ciente");
 		} else if (acao.equals("exibeCliente")) {
