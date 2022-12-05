@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/editaAgendamento" var="enderecoServletEditaAgendamento"/>
+<c:url value="/entrada?acao=ListaClientes" var="enderecoServletEditaAgendamento"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>

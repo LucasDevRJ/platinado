@@ -18,6 +18,6 @@ public class RemoveCliente {
 		BancoDados bancoDados = new BancoDados();
 		bancoDados.removeCliente(id);
 		
-		resposta.sendRedirect("clientes");
+		resposta.sendRedirect("entrada?acao=ListaClientes");
 	}
 }

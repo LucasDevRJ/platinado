@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
-@WebServlet("/editaAgendamento")
+//@WebServlet("/editaAgendamento")
 public class EditaClienteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

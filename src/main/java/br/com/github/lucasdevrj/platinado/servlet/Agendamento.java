@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/agendamento")
+//@WebServlet(urlPatterns = "/agendamento")
 public class Agendamento extends HttpServlet {//Classe para estender Servlet http
 
 	@Override//método que pega a requisição do usuário e devolve a resposta

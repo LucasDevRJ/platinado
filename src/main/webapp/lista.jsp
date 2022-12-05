@@ -1,5 +1,5 @@
 <%@ page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
-<%@ page import="br.com.github.lucasdevrj.platinado.servlet.Cliente"%>
+<%@ page import="br.com.github.lucasdevrj.platinado.modelo.Cliente"%>
 <%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -37,11 +37,11 @@
 					 			<p>Celular: ${cliente.celular}</p>
 					 			<p>Data: ${dataAgendamento}</p>
 					 			<div class="clientes-icones">
-					 				<a href="/platinado/exibeCliente?id=${cliente.id}">
+					 				<a href="/platinado/entrada?acao=ExibeCliente&id=${cliente.id}">
 					 					<img alt="" src="img/lapis.png">
 					 				</a>
 					 				
-					 				<a href="/platinado/removeCliente?id=${cliente.id}">
+					 				<a href="/platinado/entrada?acao=RemoveCliente&id=${cliente.id}">
 					 					<img alt="" src="img/excluir.png">
 					 				</a>
 					 			</div>
