@@ -1,31 +1,26 @@
-package br.com.github.lucasdevrj.platinado.servlet;
+package br.com.github.lucasdevrj.platinado.acao;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
-//@WebServlet("/editaAgendamento")
-public class EditaClienteServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class NovoCliente {
 
-	protected void doPost(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
 		String email = requisicao.getParameter("email");
 		String celular = requisicao.getParameter("celular");
 		String data = requisicao.getParameter("dataAgendamento");
-		String parametroId = requisicao.getParameter("id");
-		Integer id = Integer.valueOf(parametroId);
 		
 		Date dataAgendamento = null;
 		
@@ -36,15 +31,20 @@ public class EditaClienteServlet extends HttpServlet {
 			throw new ServletException(e);
 		}
 		
-		BancoDados bancoDados = new BancoDados();
-		Cliente cliente = bancoDados.pesquisaCliente(id);
-		cliente.setNome(nome);
-		cliente.setSobrenome(sobrenome);
-		cliente.setEmail(email);
-		cliente.setCelular(celular);
+		Cliente cliente = new Cliente(nome, sobrenome, celular, email);
 		cliente.setDataAgendamento(dataAgendamento);
 		
-		resposta.sendRedirect("clientes");
+		BancoDados bancoDados = new BancoDados();
+		bancoDados.adicionaCliente(cliente);
+		
+		requisicao.setAttribute("nome", cliente.getNome());
+		requisicao.setAttribute("sobrenome", cliente.getSobrenome());
+		requisicao.setAttribute("email", cliente.getEmail());
+		requisicao.setAttribute("celular", cliente.getCelular());
+		
+		resposta.sendRedirect("entrada?acao=ListaClientes");
+		
+		System.out.println(cliente.toString());
+		System.out.println(bancoDados.getClientes().size());
 	}
-
 }

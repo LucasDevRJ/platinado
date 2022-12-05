@@ -25,7 +25,5 @@ public class ListaClientes {
 		
 		RequestDispatcher envio = requisicao.getRequestDispatcher("/lista.jsp");
 		envio.forward(requisicao, resposta);
-		
-		System.out.println(clientes.toString());
 	}
 }

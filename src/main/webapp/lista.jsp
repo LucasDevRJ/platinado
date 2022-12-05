@@ -55,7 +55,7 @@
 					<img alt="" src="img/seta.png">
 				</a>
 				
-				<a href="/platinado/clientes">
+				<a href="/platinado/entrada?acao=ListaClientes">
 					<img alt="" src="img/lista.png">
 				</a>
 			</div>

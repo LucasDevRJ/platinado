@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/novoAgendamento" var="enderecoServletNovoAgendamento"/>
+<c:url value="/entrada" var="enderecoServletNovoAgendamento"/>
 
 <!DOCTYPE html>
 <html>
@@ -50,6 +50,8 @@
 					<label for="dataAgendamento">Data:</label>
 					<input type="text" name="dataAgendamento" pattern="\d{1,2}/\d{1,2}/\d{4}" required placeholder="dd/mm/aaaa"/>
 				</div>
+				
+				<input type="hidden" name="acao" value="NovoCliente">
 				
 				<div>
 					<input class="botao" type="submit"/>

@@ -22,6 +22,8 @@ public class ExibeCliente {
 		
 		requisicao.setAttribute("cliente", cliente);
 		
+		System.out.println("Cliente exibido: " + id);
+		
 		RequestDispatcher envia = requisicao.getRequestDispatcher("/editaAgenda.jsp");
 		envia.forward(requisicao, resposta);
 	}

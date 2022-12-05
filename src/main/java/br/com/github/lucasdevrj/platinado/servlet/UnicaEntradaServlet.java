@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.platinado.acao.EditaCliente;
 import br.com.github.lucasdevrj.platinado.acao.ExibeCliente;
 import br.com.github.lucasdevrj.platinado.acao.ListaClientes;
+import br.com.github.lucasdevrj.platinado.acao.NovoCliente;
 import br.com.github.lucasdevrj.platinado.acao.RemoveCliente;
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 
@@ -30,6 +32,12 @@ public class UnicaEntradaServlet extends HttpServlet {
 		} else if (acao.equals("ExibeCliente")) {
 			ExibeCliente exibe = new ExibeCliente();
 			exibe.executa(requisicao, resposta);
+		} else if (acao.equals("EditaCliente")) {
+			EditaCliente edita = new EditaCliente();
+			edita.executa(requisicao, resposta);
+		} else if (acao.equals("NovoCliente")) {
+			NovoCliente adiciona = new NovoCliente();
+			adiciona.executa(requisicao, resposta);
 		}
 	}
 }
