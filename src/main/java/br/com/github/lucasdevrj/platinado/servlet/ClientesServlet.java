@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
+import br.com.github.lucasdevrj.platinado.modelo.Cliente;
+
 @WebServlet("/clientes")
 public class ClientesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package br.com.github.lucasdevrj.platinado.servlet;
+package br.com.github.lucasdevrj.platinado.modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
