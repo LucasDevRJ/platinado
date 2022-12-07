@@ -14,7 +14,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
 public class EditaCliente {
 
-	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
 		String email = requisicao.getParameter("email");
@@ -42,6 +42,6 @@ public class EditaCliente {
 		
 		System.out.println("Cliente editado: " + id);
 		
-		resposta.sendRedirect("entrada?acao=ListaClientes");
+		return "redirect:entrada?acao=ListaClientes";
 	}
 }

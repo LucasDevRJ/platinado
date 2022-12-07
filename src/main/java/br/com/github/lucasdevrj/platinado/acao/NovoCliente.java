@@ -15,7 +15,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
 public class NovoCliente {
 
-	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		String nome = requisicao.getParameter("nome");
 		String sobrenome = requisicao.getParameter("sobrenome");
 		String email = requisicao.getParameter("email");
@@ -42,9 +42,6 @@ public class NovoCliente {
 		requisicao.setAttribute("email", cliente.getEmail());
 		requisicao.setAttribute("celular", cliente.getCelular());
 		
-		resposta.sendRedirect("entrada?acao=ListaClientes");
-		
-		System.out.println(cliente.toString());
-		System.out.println(bancoDados.getClientes().size());
+		return "redirect:entrada?acao=ListaClientes";
 	}
 }

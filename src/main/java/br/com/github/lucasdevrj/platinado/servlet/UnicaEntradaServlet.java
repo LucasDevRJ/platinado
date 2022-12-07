@@ -32,20 +32,22 @@ public class UnicaEntradaServlet extends HttpServlet {
 			nome = remove.executa(requisicao, resposta);
 		} else if (acao.equals("ExibeCliente")) {
 			ExibeCliente exibe = new ExibeCliente();
-			exibe.executa(requisicao, resposta);
+			nome = exibe.executa(requisicao, resposta);
 		} else if (acao.equals("EditaCliente")) {
 			EditaCliente edita = new EditaCliente();
-			edita.executa(requisicao, resposta);
+			nome = edita.executa(requisicao, resposta);
 		} else if (acao.equals("NovoCliente")) {
 			NovoCliente adiciona = new NovoCliente();
-			adiciona.executa(requisicao, resposta);
+			nome = adiciona.executa(requisicao, resposta);
 		}
 		
-		if (condition) {
-			RequestDispatcher envio = requisicao.getRequestDispatcher(nome);
+		String[] tipoEndereco = nome.split(":");
+				
+		if (tipoEndereco[0].equals("forward")) {
+			RequestDispatcher envio = requisicao.getRequestDispatcher(tipoEndereco[1]);
 			envio.forward(requisicao, resposta);
 		} else {
-			resposta.sendRedirect("entrada?acao=ListaClientes");
+			resposta.sendRedirect(tipoEndereco[1]);
 		}
 	}
 }

@@ -12,7 +12,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
 public class ExibeCliente {
 
-	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		String parametroId = requisicao.getParameter("id");
 		Integer id = Integer.valueOf(parametroId);
 		
@@ -24,7 +24,6 @@ public class ExibeCliente {
 		
 		System.out.println("Cliente exibido: " + id);
 		
-		RequestDispatcher envia = requisicao.getRequestDispatcher("/editaAgenda.jsp");
-		envia.forward(requisicao, resposta);
+		return "forward:/editaAgenda.jsp";
 	}
 }
