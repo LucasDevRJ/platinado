@@ -1,15 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/entrada" var="enderecoServletNovoAgendamento"/>
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Entre</title>
+		<title>Insert title here</title>
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<header class="cabecalho">
@@ -24,27 +21,19 @@
 			</nav>
 		</header>
 		
-		<form action="${enderecoServletNovoAgendamento}" method="POST">
-			<div class="formulario">
-				<div class="formulario-campo">
-					<label for="usuario">Usuário:</label>
-					<input type="text" name="usuario" placeholder="Digite seu nome de usuário" required="required">
-				</div>
+		<main>
+			<h2 class="logado-texto">Olá ${login}, você foi logado com sucesso!</h2>
+			
+			<div class="agendado-imagens">
+				<a href="/platinado/entrada?acao=NovoClienteFormulario">
+					<img alt="" src="img/seta.png">
+				</a>
 				
-				<div class="formulario-campo">
-					<label for="senha">Senha:</label>
-					<input type="password" name="senha" placeholder="Digite a sua senha de usuário" required="required">
-				</div>
-				
-				<div>
-					<input class="botao-login" name="acao" value="Login" type="submit"/>
-				</div>
-				
-				<div>
-					<p>Não possui cadastro? <a href="criaConta.jsp">Crie sua conta</a></p>
-				</div>
+				<a href="/platinado/entrada?acao=ListaClientes">
+					<img alt="" src="img/lista.png">
+				</a>
 			</div>
-		</form>
+		</main>
 		
 		<footer class="rodape">
 			<img class="logo-rodape" alt="" src="img/logo-rodape.png">

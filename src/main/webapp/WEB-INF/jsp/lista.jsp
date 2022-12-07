@@ -51,7 +51,7 @@
 			</div>
 			 
 			  <div class="agendado-imagens">
-				<a href="agenda.jsp">
+				<a href="/platinado/entrada?acao=NovoClienteFormulario">
 					<img alt="" src="img/seta.png">
 				</a>
 				

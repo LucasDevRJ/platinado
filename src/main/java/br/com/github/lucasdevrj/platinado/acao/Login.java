@@ -6,11 +6,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class FormularioLogin implements Acao {
+import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
+import br.com.github.lucasdevrj.platinado.modelo.Usuario;
+
+public class Login implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
-		return "forward:login.jsp";
+		String login = requisicao.getParameter("login");
+		String senha = requisicao.getParameter("senha");
+		
+		return "forward:logado.jsp";
 	}
 
 }
