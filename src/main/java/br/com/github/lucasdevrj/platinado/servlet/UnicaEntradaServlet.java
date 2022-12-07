@@ -13,8 +13,8 @@ import br.com.github.lucasdevrj.platinado.acao.EditaCliente;
 import br.com.github.lucasdevrj.platinado.acao.ExibeCliente;
 import br.com.github.lucasdevrj.platinado.acao.ListaClientes;
 import br.com.github.lucasdevrj.platinado.acao.NovoCliente;
+import br.com.github.lucasdevrj.platinado.acao.NovoClienteFormulario;
 import br.com.github.lucasdevrj.platinado.acao.RemoveCliente;
-import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 
 @WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
@@ -38,6 +38,9 @@ public class UnicaEntradaServlet extends HttpServlet {
 			nome = edita.executa(requisicao, resposta);
 		} else if (acao.equals("NovoCliente")) {
 			NovoCliente adiciona = new NovoCliente();
+			nome = adiciona.executa(requisicao, resposta);
+		} else if (acao.equals("NovoClienteFormulario")) {
+			NovoClienteFormulario adiciona = new NovoClienteFormulario();
 			nome = adiciona.executa(requisicao, resposta);
 		}
 		
