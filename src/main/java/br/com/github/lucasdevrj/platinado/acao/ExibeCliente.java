@@ -24,6 +24,6 @@ public class ExibeCliente {
 		
 		System.out.println("Cliente exibido: " + id);
 		
-		return "forward:/editaAgenda.jsp";
+		return "forward:editaAgenda.jsp";
 	}
 }

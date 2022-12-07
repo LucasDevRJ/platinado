@@ -21,6 +21,6 @@ public class ListaClientes {
 		
 		requisicao.setAttribute("clientes", clientes);
 		
-		return "forward:/lista.jsp";
+		return "forward:lista.jsp";
 	}
 }
