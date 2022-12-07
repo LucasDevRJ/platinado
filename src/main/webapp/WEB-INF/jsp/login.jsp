@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url value="/entrada" var="enderecoServletNovoAgendamento"/>
+<c:url value="/entrada?acao=NovoUsuario" var="enderecoServletNovoAgendamento"/>
 
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,7 @@
 				</div>
 				
 				<div>
-					<p>Não possui cadastro? <a href="criaConta.jsp">Crie sua conta</a></p>
+					<p>Não possui cadastro? <a href="${enderecoServletNovoAgendamento}">Crie sua conta</a></p>
 				</div>
 			</div>
 		</form>
