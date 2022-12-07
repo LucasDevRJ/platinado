@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 
-public class RemoveCliente {
+public class RemoveCliente implements Acao{
 
 	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws IOException {
 		String parametroId = requisicao.getParameter("id");

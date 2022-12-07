@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
-public class EditaCliente {
+public class EditaCliente implements Acao{
 
 	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		String nome = requisicao.getParameter("nome");
