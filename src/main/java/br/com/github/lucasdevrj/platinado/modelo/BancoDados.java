@@ -9,15 +9,20 @@ public class BancoDados {
 	private static List<Cliente> clientes = new ArrayList<>();
 	private static List<Usuario> usuarios = new ArrayList<>();
 	private static Integer chaveSequencial = 1;
-	
+	private static Integer chaveSequencialUsuario = 1;
+
 	static {
 		Usuario usuario = new Usuario("Lucas", "adm");
-		
 		BancoDados.usuarios.add(usuario);
 	}
+
 	
 	public void adicionaChaveSequencial(Cliente cliente) {
 		cliente.setId(chaveSequencial++);
+	}
+	
+	public void adicionaChaveSequencialUsuario(Usuario usuario) {
+		usuario.setId(chaveSequencialUsuario++);
 	}
 
 	public void adicionaCliente(Cliente cliente) {
@@ -25,10 +30,19 @@ public class BancoDados {
 		BancoDados.clientes.add(cliente);
 	}
 	
+	public void adicionaUsuario(Usuario usuario) {
+		adicionaChaveSequencialUsuario(usuario);
+		BancoDados.usuarios.add(usuario);
+	}
+	
 	public List<Cliente> getClientes() {
 		return BancoDados.clientes;
 	}
-
+	
+	public List<Usuario> getUsuarios() {
+		return BancoDados.usuarios;
+	}
+	
 	public void removeCliente(Integer id) {
 		Iterator<Cliente> iterator = clientes.iterator();
 		
@@ -51,7 +65,12 @@ public class BancoDados {
 		return null;
 	}
 
-	public void adicionaUsuario(Usuario usuario) {
-		BancoDados.usuarios.add(usuario);
+	public Usuario existeUsuario(String login, String senha) {
+		for (Usuario usuario : usuarios) {
+			if (usuario.ehIgual(login, senha)) {
+				return usuario;
+			}
+		}
+		return null;
 	}
 }

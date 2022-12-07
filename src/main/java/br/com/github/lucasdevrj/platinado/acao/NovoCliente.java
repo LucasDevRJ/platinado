@@ -42,6 +42,8 @@ public class NovoCliente implements Acao{
 		requisicao.setAttribute("email", cliente.getEmail());
 		requisicao.setAttribute("celular", cliente.getCelular());
 		
+		System.out.println(bancoDados.getClientes());
+		
 		return "redirect:entrada?acao=ListaClientes";
 	}
 }

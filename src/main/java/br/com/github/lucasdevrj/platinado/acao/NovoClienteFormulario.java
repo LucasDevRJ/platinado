@@ -17,7 +17,6 @@ public class NovoClienteFormulario implements Acao{
 
 	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		
-		
 		return "forward:agenda.jsp";
 	}
 }

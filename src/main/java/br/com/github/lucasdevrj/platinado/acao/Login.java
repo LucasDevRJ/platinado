@@ -16,7 +16,19 @@ public class Login implements Acao {
 		String login = requisicao.getParameter("login");
 		String senha = requisicao.getParameter("senha");
 		
-		return "forward:logado.jsp";
+		BancoDados bancoDados = new BancoDados();
+		Usuario usuario = bancoDados.existeUsuario(login, senha);
+		
+		System.out.println(bancoDados.getUsuarios());
+		
+		if (usuario != null) {
+			System.out.println("Usuário existe!!");
+			return "forward:logado.jsp";
+		} else {
+			System.out.println("Usuário não existe");
+			return "redirect:entrada?acao=FormularioLogin";
+		}
+		
 	}
 
 }

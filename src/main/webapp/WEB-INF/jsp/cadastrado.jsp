@@ -22,8 +22,9 @@
 		</header>
 		
 		<main>
-			<h2 class="logado-texto">Olá ${login}, você foi logado com sucesso!</h2>
-			<h2 class="logado-texto">Agende seu corte ou veja seus agendamentos.</h2>
+			<h2 class="logado-texto">Olá ${login}, você foi cadastrado com sucesso!</h2>
+			
+			<h2 class="logado-texto">Escolha se quer agendar o corte ou consultar seus agendamentos.</h2>
 			
 			<div class="agendado-imagens">
 				<a href="/platinado/entrada?acao=NovoClienteFormulario">

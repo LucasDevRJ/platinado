@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/entrada" var="enderecoServletNovoAgendamento"/>
+<c:url value="/entrada?acao=Login" var="enderecoServletLogin"/>
 <c:url value="/entrada?acao=NovoUsuario" var="enderecoServletNovoAgendamento"/>
 
 <!DOCTYPE html>
@@ -37,9 +37,9 @@
 					<input type="password" name="senha" placeholder="Digite a sua senha de usuário" required="required">
 				</div>
 				
-				<div>
-					<input class="botao-login" name="acao" value="Login" type="submit"/>
-				</div>
+				<a class="botao-login" href="${enderecoServletLogin}">
+					Entrar
+				</a>
 				
 				<div>
 					<p>Não possui cadastro? <a href="${enderecoServletNovoAgendamento}">Crie sua conta</a></p>

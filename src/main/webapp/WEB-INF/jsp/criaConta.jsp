@@ -27,8 +27,8 @@
 		<form action="${enderecoServletNovoAgendamento}" method="POST">
 			<div class="formulario">
 				<div class="formulario-campo">
-					<label for="usuario">Usuário:</label>
-					<input type="text" name="usuario" placeholder="Digite seu nome de usuário" required="required">
+					<label for="login">Usuário:</label>
+					<input type="text" name="login" placeholder="Digite seu nome de usuário" required="required">
 				</div>
 				
 				<div class="formulario-campo">

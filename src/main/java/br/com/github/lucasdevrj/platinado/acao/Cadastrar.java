@@ -24,7 +24,9 @@ public class Cadastrar implements Acao {
 		requisicao.setAttribute("login", usuario.getLogin());
 		requisicao.setAttribute("senha", usuario.getSenha());
 		
-		return "redirect:entrada?acao=ListaClientes";
+		System.out.println(bancoDados.getUsuarios());
+		
+		return "forward:cadastrado.jsp";
 	}
 
 }

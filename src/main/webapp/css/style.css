@@ -159,11 +159,14 @@
 
 .botao-login {
 	padding: 10px 50px;
-	font-size: 18px;
-	margin-top: 20px;
-	cursor: pointer;
-	font-weight: 700;
-	margin-bottom: 100px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 100px;
+    border: 1px solid;
+    text-decoration: none;
+    color: #000;
 }
 
 .logado-texto {

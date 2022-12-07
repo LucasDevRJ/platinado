@@ -2,6 +2,7 @@ package br.com.github.lucasdevrj.platinado.modelo;
 
 public class Usuario {
 
+	private Integer id;
     private String login;
     private String senha;
     
@@ -9,6 +10,14 @@ public class Usuario {
     	this.login = login;
     	this.senha = senha;
     }
+    
+    public Integer getId() {
+		return id;
+	}
+    
+    public void setId(Integer id) {
+		this.id = id;
+	}
 
     public String getLogin() {
         return login;
@@ -36,5 +45,10 @@ public class Usuario {
         }
 
         return true;
+    }
+    
+    @Override
+    public String toString() {
+    	return "ID: " + this.id + "\nLogin: " + this.login + "\nSenha: " + this.senha;
     }
 }
