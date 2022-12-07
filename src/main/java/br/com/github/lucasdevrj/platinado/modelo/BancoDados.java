@@ -1,12 +1,14 @@
 package br.com.github.lucasdevrj.platinado.modelo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
 public class BancoDados {
 	
 	private static List<Cliente> clientes = new ArrayList<>();
+	private static List<Usuario> usuarios = new ArrayList<>();
 	private static Integer chaveSequencial = 1;
 	
 	public void adicionaChaveSequencial(Cliente cliente) {

@@ -156,3 +156,12 @@
 	gap: 40px;
 	margin-top: 10px;
 }
+
+.botao-login {
+	padding: 10px 50px;
+	font-size: 18px;
+	margin-top: 20px;
+	cursor: pointer;
+	font-weight: 700;
+	margin-bottom: 100px;
+}
