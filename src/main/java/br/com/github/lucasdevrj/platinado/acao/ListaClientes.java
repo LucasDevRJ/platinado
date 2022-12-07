@@ -13,7 +13,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 
 public class ListaClientes {
 
-	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		System.out.println("Listando clientes");
 		
 		BancoDados bancoDados = new BancoDados();
@@ -21,9 +21,6 @@ public class ListaClientes {
 		
 		requisicao.setAttribute("clientes", clientes);
 		
-//		resposta.sendRedirect("lista");
-		
-		RequestDispatcher envio = requisicao.getRequestDispatcher("/lista.jsp");
-		envio.forward(requisicao, resposta);
+		return "lista.jsp";
 	}
 }

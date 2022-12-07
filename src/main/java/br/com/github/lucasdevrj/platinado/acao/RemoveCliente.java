@@ -9,7 +9,7 @@ import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 
 public class RemoveCliente {
 
-	public void executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws IOException {
+	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws IOException {
 		String parametroId = requisicao.getParameter("id");
 		Integer id = Integer.valueOf(parametroId);
 		
@@ -20,6 +20,6 @@ public class RemoveCliente {
 		
 		System.out.println("Cliente removido: " + id);
 		
-		resposta.sendRedirect("entrada?acao=ListaClientes");
+		return "redirect:entrada?acao=ListaClientes";
 	}
 }
