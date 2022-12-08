@@ -41,7 +41,7 @@
 					<input name="acao" value="Login" class="botao" type="submit">
 				</div>
 				
-				<div>
+				<div class="conta">
 					Não possui conta? <a href="${enderecoServletNovoUsuario}">Crie aqui</a>
 				</div>
 			</div>

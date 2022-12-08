@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.github.lucasdevrj.platinado.acao.Acao;
 import br.com.github.lucasdevrj.platinado.acao.EditaCliente;
@@ -22,7 +23,17 @@ public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+		HttpSession sessao = requisicao.getSession();
+		
 		String ParametroAcao = requisicao.getParameter("acao");
+		
+		boolean usuarioLogado = sessao.getAttribute("usuario") == null;
+		boolean acaoProtegida = ParametroAcao.equals("ListaClientes");
+		
+		if (usuarioLogado && acaoProtegida) {
+			resposta.sendRedirect("entrada?acao=Login");
+			return;
+		}
 		
 		String nomeClasse = "br.com.github.lucasdevrj.platinado.acao." + ParametroAcao;
 		

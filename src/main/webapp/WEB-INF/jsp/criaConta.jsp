@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/entrada" var="enderecoServletNovoAgendamento"/>
+<c:url value="/entrada" var="enderecoServletNovoCadastro"/>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
 			</nav>
 		</header>
 		
-		<form action="${enderecoServletNovoAgendamento}" method="POST">
+		<form action="${enderecoServletNovoCadastro}" method="POST">
 			<div class="formulario">
 				<div class="formulario-campo">
 					<label for="login">Usuário:</label>
@@ -37,7 +37,7 @@
 				</div>
 				
 				<div>
-					<input class="botao-login" name="acao" value="Cadastrar" type="submit"/>
+					<input class="botao-cadastrar" name="acao" value="Cadastrar" type="submit"/>
 				</div>
 			</div>
 		</form>
