@@ -8,10 +8,11 @@
 		<title>Platinado | Agenda</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
 		<header class="cabecalho">
+			<c:import url="logout-parcial.jsp"/>
 			<h1><img class="logo" src="img/logo.png"/></h1>
 			<nav>
 				<ul class="navegacao">

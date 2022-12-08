@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
 		<link rel="stylesheet" href="css/reset.css">
-		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<header class="cabecalho">
+			<c:import url="logout-parcial.jsp"/>
 			<h1><img class="logo" src="img/logo.png"/></h1>
 			<nav>
 				<ul class="navegacao">

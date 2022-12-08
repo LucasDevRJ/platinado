@@ -10,11 +10,12 @@
 			<meta charset="UTF-8">
 			<title>Platinado</title>
 			<link rel="stylesheet" href="css/reset.css">
-			<link href="css/style.css" rel="stylesheet" type="text/css">
+			<link href="css/styles.css" rel="stylesheet" type="text/css">
 		</head>
 		
 		<body>
 			<header class="cabecalho">
+				<c:import url="logout-parcial.jsp"/>
 				<h1><img class="logo" src="img/logo.png"/></h1>
 				<nav>
 					<ul class="navegacao">

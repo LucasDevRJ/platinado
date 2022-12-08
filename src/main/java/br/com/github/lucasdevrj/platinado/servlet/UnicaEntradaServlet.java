@@ -25,17 +25,17 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
 		HttpSession sessao = requisicao.getSession();
 		
-		String ParametroAcao = requisicao.getParameter("acao");
+		String parametroAcao = requisicao.getParameter("acao");
 		
 		boolean usuarioLogado = sessao.getAttribute("usuario") == null;
-		boolean acaoProtegida = ParametroAcao.equals("ListaClientes");
+		boolean acaoProtegida = !(parametroAcao.equals("Login") || parametroAcao.equals("FormularioLogin") || parametroAcao.equals("Cadastrar") || parametroAcao.equals("NovoUsuario"));
 		
 		if (usuarioLogado && acaoProtegida) {
 			resposta.sendRedirect("entrada?acao=Login");
 			return;
 		}
 		
-		String nomeClasse = "br.com.github.lucasdevrj.platinado.acao." + ParametroAcao;
+		String nomeClasse = "br.com.github.lucasdevrj.platinado.acao." + parametroAcao;
 		
 		String nome;
 		try {

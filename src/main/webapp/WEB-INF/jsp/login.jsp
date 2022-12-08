@@ -10,7 +10,7 @@
 		<meta charset="ISO-8859-1">
 		<title>Entre</title>
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
 		<header class="cabecalho">

@@ -15,6 +15,7 @@ import br.com.github.lucasdevrj.platinado.modelo.Cliente;
 public class ListaClientes implements Acao{
 
 	public String executa(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+		
 		System.out.println("Listando clientes");
 		
 		BancoDados bancoDados = new BancoDados();

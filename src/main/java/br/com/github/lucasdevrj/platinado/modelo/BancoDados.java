@@ -11,13 +11,6 @@ public class BancoDados {
 	private static Integer chaveSequencial = 1;
 	private static Integer chaveSequencialUsuario = 1;
 
-	static {
-		Usuario usuario = new Usuario("Lucas", "adm");
-		usuario.setId(1);
-		BancoDados.usuarios.add(usuario);
-	}
-
-	
 	public void adicionaChaveSequencial(Cliente cliente) {
 		cliente.setId(chaveSequencial++);
 	}
