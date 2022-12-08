@@ -13,6 +13,7 @@ public class BancoDados {
 
 	static {
 		Usuario usuario = new Usuario("Lucas", "adm");
+		usuario.setId(1);
 		BancoDados.usuarios.add(usuario);
 	}
 

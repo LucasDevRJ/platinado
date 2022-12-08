@@ -22,7 +22,7 @@
 		</header>
 		
 		<main>
-			<h2 class="logado-texto">Olá ${login}, você foi logado com sucesso!</h2>
+			<h2 class="logado-texto">Olá ${usuario.login}, você foi logado com sucesso!</h2>
 			<h2 class="logado-texto">Agende seu corte ou veja seus agendamentos.</h2>
 			
 			<div class="agendado-imagens">

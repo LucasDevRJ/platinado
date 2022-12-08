@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:url value="/entrada?acao=Login" var="enderecoServletLogin"/>
-<c:url value="/entrada?acao=NovoUsuario" var="enderecoServletNovoAgendamento"/>
+<c:url value="/entrada" var="enderecoServletLogin"/>
+<c:url value="/entrada?acao=NovoUsuario" var="enderecoServletNovoUsuario"/>
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
 			</nav>
 		</header>
 		
-		<form action="${enderecoServletNovoAgendamento}" method="POST">
+		<form action="${enderecoServletLogin}" method="POST">
 			<div class="formulario">
 				<div class="formulario-campo">
 					<label for="usuario">Usuário:</label>
@@ -37,12 +37,12 @@
 					<input type="password" name="senha" placeholder="Digite a sua senha de usuário" required="required">
 				</div>
 				
-				<a class="botao-login" href="${enderecoServletLogin}">
-					Entrar
-				</a>
+				<div>
+					<input name="acao" value="Login" class="botao" type="submit">
+				</div>
 				
 				<div>
-					<p>Não possui cadastro? <a href="${enderecoServletNovoAgendamento}">Crie sua conta</a></p>
+					Não possui conta? <a href="${enderecoServletNovoUsuario}">Crie aqui</a>
 				</div>
 			</div>
 		</form>
