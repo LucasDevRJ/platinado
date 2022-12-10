@@ -25,6 +25,7 @@ public class ClientesService extends HttpServlet {
 		List<Cliente> listaClientes =  new BancoDados().getClientes();
 		
 		XStream xtream = new XStream();
+		xtream.alias("cliente", Cliente.class);
 		String xml = xtream.toXML(listaClientes);
 		
 		resposta.setContentType("application/xml");
