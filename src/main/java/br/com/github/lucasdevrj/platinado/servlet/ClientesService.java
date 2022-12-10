@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
+import com.thoughtworks.xstream.XStream;
 
 import br.com.github.lucasdevrj.platinado.modelo.BancoDados;
 import br.com.github.lucasdevrj.platinado.modelo.Cliente;
@@ -19,13 +20,24 @@ public class ClientesService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest requisicao, HttpServletResponse resposta) throws ServletException, IOException {
+
+		//Aplicação com XML
 		List<Cliente> listaClientes =  new BancoDados().getClientes();
 		
-		Gson gson = new Gson();
-		String json = gson.toJson(listaClientes);
+		XStream xtream = new XStream();
+		String xml = xtream.toXML(listaClientes);
 		
-		resposta.setContentType("application/json");
-		resposta.getWriter().print(json);
+		resposta.setContentType("application/xml");
+		resposta.getWriter().print(xml);
+		
+		//Aplicação com JSON
+//		List<Cliente> listaClientes =  new BancoDados().getClientes();
+//		
+//		Gson gson = new Gson();
+//		String json = gson.toJson(listaClientes);
+//		
+//		resposta.setContentType("application/json");
+//		resposta.getWriter().print(json);
 	}
 
 }
